@@ -1,20 +1,44 @@
-<!---
+⚙️ How it works
+This project implements a Phase-Locked Loop (PLL) designed to lock the phase of an output signal to a reference input. The core architecture includes:
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
+Phase Detector: Compares the input and feedback signals to generate a phase error.
 
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+Loop Filter: Smooths the error signal to control the voltage-controlled oscillator (VCO).
 
-## How it works
+VCO: Generates a frequency-adjustable output based on the filtered control voltage.
 
-Explain how your project works
+Feedback Divider: Scales the output frequency for comparison with the reference.
 
-## How to test
+The PLL stabilizes the output frequency and phase, making it suitable for clock generation, frequency synthesis, and jitter reduction in digital systems.
 
-Explain how to use your project
+🧪 How to test
+To validate the PLL functionality:
 
-## External hardware
+Simulation:
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Run behavioral simulations using your testbench to verify lock time, jitter, and frequency stability.
+
+Check waveform outputs for phase alignment between reference and output signals.
+
+Hardware Testing:
+
+Deploy the design on an FPGA or ASIC test platform.
+
+Use a signal generator to provide the reference clock.
+
+Monitor the output using an oscilloscope or logic analyzer to confirm phase lock and frequency accuracy.
+
+Lock Detection:
+
+Include a lock signal output in your design to indicate when the PLL has stabilized.
+
+🔌 External hardware
+This PLL project may interface with the following external components:
+
+Reference Clock Source: Typically a crystal oscillator or external clock generator.
+
+Test Equipment: Oscilloscope, signal generator, and logic analyzer for validation.
+
+Optional PMOD Interface: For modular integration with FPGA boards.
+
+Power Supply: Stable voltage source for analog blocks (if implemented in mixed-signal flows).
