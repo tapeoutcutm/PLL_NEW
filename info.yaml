@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "Improved Delay PLL"      # Project title
-  author:       "Rekhana"                 # Your name
+  author:       "CUTM"                 # Your name
  
   description:  "Analog PLL with improved delay characteristics"  # One line description
   language:     "Analog"                  # Verilog, Amaranth, VHDL, etc
@@ -13,7 +13,7 @@ project:
   uses_3v3: false                         # Set true if using 3.3V
 
   # Top module name (no file extension, no special characters unless escaped)
-  top_module:  "tt_um_Improved_delay_PLL_1"  # Avoid brackets or file extensions
+  top_module:  "tt_um_Improved_delay_PLL"  # Avoid brackets or file extensions
 
   # Source files (must be in ./src)
   source_files:        
