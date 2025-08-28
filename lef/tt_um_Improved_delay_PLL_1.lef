@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO PLL
+MACRO tt_um_Improved_delay_PLL
   CLASS CORE ;
-  FOREIGN PLL ;
+  FOREIGN tt_um_Improved_delay_PLL ;
   ORIGIN 0.000 0.000 ;
   SIZE 36.180 BY 13.710 ;
   SITE unithddb1 ;
@@ -1347,6 +1347,6 @@ MACRO PLL
         RECT 19.370 10.610 19.790 10.850 ;
         RECT 8.910 10.260 19.790 10.610 ;
   END
-END PLL
+END tt_um_Improved_delay_PLL
 END LIBRARY
 
