@@ -92,7 +92,7 @@ MACRO PFD
         RECT 5.600 0.720 6.270 1.010 ;
     END
   END GND
-  PIN VDD
+  PIN VDPWR
     DIRECTION INOUT ;
     USE POWER ;
     PORT
@@ -171,7 +171,7 @@ MACRO PFD
         RECT 6.560 0.480 6.860 2.070 ;
         RECT 0.000 0.000 7.670 0.480 ;
     END
-  END VDD
+  END VDPWR
   OBS
       LAYER li1 ;
         RECT 1.550 4.880 2.240 5.240 ;
