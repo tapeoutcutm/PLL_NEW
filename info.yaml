@@ -1,12 +1,12 @@
 # Tiny Tapeout project information
 project:
   title:        "Improved Delay PLL"        # Project title
-  author:       "CUTM"                      # Your name
+  author:       "CUTM"                      # Your name / team
   description:  "Analog PLL with improved delay characteristics"
   language:     "Verilog"                   # Using structural Verilog netlist
   clock_hz:     0                           # 0 for analog
   tiles:        "1x2"                       # Tile size
-  analog_pins:  2                           # Number of analog pins used
+  analog_pins:  0                           # No external analog pins
   uses_3v3:     false                       # Using 1.8V domain (not 3.3V)
   top_module:   "tt_um_Improved_delay_PLL"  # Top module name
   source_files:        
@@ -22,17 +22,17 @@ pinout:
   ui[4]: "KICK_N"        # Startup pulse complement
   ui[5]: "CP_UP_N"       # Phase detector UP (active low)
   ui[6]: "CP_DOWN"       # Phase detector DOWN
-  ui[7]: ""              # (spare input)
+  ui[7]: ""              # Spare input (not used)
 
   # Outputs
   uo[0]: "CK"            # PLL output clock
   uo[1]: "CK_FB"         # PLL feedback clock
   uo[2]: "CP_UP"         # Phase detector UP (buffered)
   uo[3]: "CP_DOWN_N"     # Phase detector DOWN (inverted)
-  uo[4]: ""              # (optional lock detect/debug)
-  uo[5]: ""              # spare
-  uo[6]: ""              # spare
-  uo[7]: ""              # spare
+  uo[4]: ""              # Optional lock detect/debug
+  uo[5]: ""              # Spare
+  uo[6]: ""              # Spare
+  uo[7]: ""              # Spare
 
   # Bidirectional pins
   uio[0]: ""
@@ -44,9 +44,7 @@ pinout:
   uio[6]: ""
   uio[7]: ""
 
-  # Analog pins
-  # ua[0]: "VLPF"     # PLL loop filter node
-#  ua[1]: "VLPFZ"    # PLL loop filter zero node
+  # Analog pins (not used externally)
   ua[0]: ""
   ua[1]: ""
   ua[2]: ""
@@ -56,3 +54,4 @@ pinout:
 
 # Do not change!
 yaml_version: 6
+
