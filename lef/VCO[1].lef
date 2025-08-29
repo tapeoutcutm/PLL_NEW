@@ -17,7 +17,7 @@ MACRO VCO
         RECT 0.070 4.190 0.800 4.390 ;
     END
   END VCtrl
-  PIN VDD
+  PIN VDPWR
     DIRECTION INOUT ;
     USE POWER ;
     PORT
@@ -90,7 +90,7 @@ MACRO VCO
       LAYER met1 ;
         RECT 0.000 5.920 9.020 6.400 ;
     END
-  END VDD
+  END VDPWR
   PIN GND
     DIRECTION INOUT ;
     USE GROUND ;
