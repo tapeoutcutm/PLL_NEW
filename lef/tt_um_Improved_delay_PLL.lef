@@ -72,7 +72,7 @@ MACRO tt_um_Improved_delay_PLL
         RECT 0.000 8.980 0.310 9.120 ;
     END
   END VGND
-  PIN VDD
+  PIN VDPWR
     DIRECTION INOUT ;
     USE POWER ;
     PORT
@@ -269,7 +269,7 @@ MACRO tt_um_Improved_delay_PLL
         RECT 27.430 4.920 28.130 6.380 ;
         RECT 27.430 4.620 28.150 4.920 ;
     END
-  END VDD
+  END VDPWR
   PIN ENb_CP
     DIRECTION INPUT ;
     USE SIGNAL ;
@@ -507,7 +507,7 @@ MACRO tt_um_Improved_delay_PLL
         RECT 6.610 1.180 7.280 1.470 ;
     END
   END VGND#2
-  PIN VDD#2
+  PIN VDPWR#2
     DIRECTION INOUT ;
     USE POWER ;
     PORT
@@ -624,7 +624,7 @@ MACRO tt_um_Improved_delay_PLL
         RECT 28.530 0.310 29.040 0.460 ;
         RECT 28.320 0.000 29.230 0.310 ;
     END
-  END VDD#2
+  END VDPWR#2
   PIN VCO_IN
     DIRECTION INPUT ;
     USE SIGNAL ;
@@ -648,7 +648,7 @@ MACRO tt_um_Improved_delay_PLL
         RECT 35.900 8.270 36.180 8.500 ;
     END
   END VCO_IN
-  PIN VDD#3
+  PIN VDPWR#3
     DIRECTION INOUT ;
     USE POWER ;
     PORT
@@ -719,7 +719,7 @@ MACRO tt_um_Improved_delay_PLL
         RECT 35.280 9.340 36.180 9.960 ;
         RECT 35.870 9.270 36.180 9.340 ;
     END
-  END VDD#3
+  END VDPWR#3
   PIN REF
     DIRECTION INPUT ;
     USE SIGNAL ;
