@@ -8,7 +8,7 @@ MACRO tt_um_Improved_delay_PLL
   ORIGIN 0.000 0.000 ;
   SIZE 36.180 BY 13.710 ;
   SITE unithddb1 ;
-  PIN GND
+  PIN VGND
     DIRECTION INOUT ;
     USE GROUND ;
     PORT
@@ -71,7 +71,7 @@ MACRO tt_um_Improved_delay_PLL
         RECT 0.000 9.120 0.900 9.580 ;
         RECT 0.000 8.980 0.310 9.120 ;
     END
-  END GND
+  END VGND
   PIN VDD
     DIRECTION INOUT ;
     USE POWER ;
@@ -402,7 +402,7 @@ MACRO tt_um_Improved_delay_PLL
         RECT 0.000 7.770 0.280 7.990 ;
     END
   END ENb_VCO
-  PIN GND#2
+  PIN VGND#2
     DIRECTION INOUT ;
     USE GROUND ;
     PORT
@@ -506,7 +506,7 @@ MACRO tt_um_Improved_delay_PLL
         RECT 6.610 1.470 6.880 3.420 ;
         RECT 6.610 1.180 7.280 1.470 ;
     END
-  END GND#2
+  END VGND#2
   PIN VDD#2
     DIRECTION INOUT ;
     USE POWER ;
