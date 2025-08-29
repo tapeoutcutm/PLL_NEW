@@ -45,8 +45,10 @@ pinout:
   uio[7]: ""
 
   # Analog pins
-  ua[0]: "VLPF"     # PLL loop filter node
-  ua[1]: "VLPFZ"    # PLL loop filter zero node
+  # ua[0]: "VLPF"     # PLL loop filter node
+#  ua[1]: "VLPFZ"    # PLL loop filter zero node
+  ua[0]: ""
+  ua[1]: ""
   ua[2]: ""
   ua[3]: ""
   ua[4]: ""
