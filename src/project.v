@@ -7,7 +7,7 @@
 
 module tt_um_Improved_delay_PLL(
     input  wire       VGND,
-    input  wire       VDD,    // 1.8v power supply
+   // input  wire       VDD,    // 1.8v power supply
     input  wire       VDPWR,    // 3.3v power supply
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
