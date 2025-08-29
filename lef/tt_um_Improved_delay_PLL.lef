@@ -11,7 +11,9 @@ MACRO tt_um_Improved_delay_PLL
   SIZE 161000 BY 225760 ;
   SYMMETRY X Y ;
 
-  # Power pins
+  ###########################################################
+  # Power Pins
+  ###########################################################
   PIN VPWR
     DIRECTION INOUT ;
     USE POWER ;
@@ -30,23 +32,15 @@ MACRO tt_um_Improved_delay_PLL
     END
   END VGND
 
-  # Control pins (from DEF)
+  ###########################################################
+  # Control Pins
+  ###########################################################
   PIN clk
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 143980-150 225260-500 143980+150 225260+500 ;
-    END
-  END clk
-
-  # Concretely expanded (values replaced below with computed numbers)
-  PIN clk
-    DIRECTION INPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 143830 224760 144130 225760 ;
+      LAYER met2 ;
+        RECT 2000 0 3000 2000 ;
     END
   END clk
 
@@ -54,8 +48,8 @@ MACRO tt_um_Improved_delay_PLL
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 146590 224760 146890 225760 ;
+      LAYER met2 ;
+        RECT 4000 0 5000 2000 ;
     END
   END ena
 
@@ -63,448 +57,385 @@ MACRO tt_um_Improved_delay_PLL
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 141070 224760 141370 225760 ;
+      LAYER met2 ;
+        RECT 6000 0 7000 2000 ;
     END
   END rst_n
 
-  # ua[0..7] -> renamed ua_0 .. ua_7 (bottom pins, port was (-450 -500) (450 500))
-  PIN ua_0
-    DIRECTION INOUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 151810 -500 152710 1500 ;
-    END
-  END ua_0
-
-  PIN ua_1
-    DIRECTION INOUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 132490 -500 133390 1500 ;
-    END
-  END ua_1
-
-  PIN ua_2
-    DIRECTION INOUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 113170 -500 114070 1500 ;
-    END
-  END ua_2
-
-  PIN ua_3
-    DIRECTION INOUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 93850 -500 94750 1500 ;
-    END
-  END ua_3
-
-  PIN ua_4
-    DIRECTION INOUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 74530 -500 75430 1500 ;
-    END
-  END ua_4
-
-  PIN ua_5
-    DIRECTION INOUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 55210 -500 56110 1500 ;
-    END
-  END ua_5
-
-  PIN ua_6
-    DIRECTION INOUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 35890 -500 36790 1500 ;
-    END
-  END ua_6
-
-  PIN ua_7
-    DIRECTION INOUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 16570 -500 17470 1500 ;
-    END
-  END ua_7
-
-  # ui_in[0..7] -> ui_in_0 .. ui_in_7 (top pins at y=225260, port (-150 -500) (150 500))
-  PIN ui_in_0
+  ###########################################################
+  # ui_in[0..7]
+  ###########################################################
+  PIN ui_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 138310 224760 138610 225760 ;
+      LAYER met2 ;
+        RECT 8000 0 9000 2000 ;
     END
-  END ui_in_0
+  END ui_in[0]
 
-  PIN ui_in_1
+  PIN ui_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 135550 224760 135850 225760 ;
+      LAYER met2 ;
+        RECT 10000 0 11000 2000 ;
     END
-  END ui_in_1
+  END ui_in[1]
 
-  PIN ui_in_2
+  PIN ui_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 132790 224760 133090 225760 ;
+      LAYER met2 ;
+        RECT 12000 0 13000 2000 ;
     END
-  END ui_in_2
+  END ui_in[2]
 
-  PIN ui_in_3
+  PIN ui_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 130030 224760 130330 225760 ;
+      LAYER met2 ;
+        RECT 14000 0 15000 2000 ;
     END
-  END ui_in_3
+  END ui_in[3]
 
-  PIN ui_in_4
+  PIN ui_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 127270 224760 127570 225760 ;
+      LAYER met2 ;
+        RECT 16000 0 17000 2000 ;
     END
-  END ui_in_4
+  END ui_in[4]
 
-  PIN ui_in_5
+  PIN ui_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 124510 224760 124810 225760 ;
+      LAYER met2 ;
+        RECT 18000 0 19000 2000 ;
     END
-  END ui_in_5
+  END ui_in[5]
 
-  PIN ui_in_6
+  PIN ui_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 121750 224760 122050 225760 ;
+      LAYER met2 ;
+        RECT 20000 0 21000 2000 ;
     END
-  END ui_in_6
+  END ui_in[6]
 
-  PIN ui_in_7
+  PIN ui_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 118990 224760 119290 225760 ;
+      LAYER met2 ;
+        RECT 22000 0 23000 2000 ;
     END
-  END ui_in_7
+  END ui_in[7]
 
-  # uio_in[0..7] (top)
-  PIN uio_in_0
+  ###########################################################
+  # uo_out[0..7]
+  ###########################################################
+  PIN uo_out[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 2000 223760 3000 225760 ;
+    END
+  END uo_out[0]
+
+  PIN uo_out[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 4000 223760 5000 225760 ;
+    END
+  END uo_out[1]
+
+  PIN uo_out[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 6000 223760 7000 225760 ;
+    END
+  END uo_out[2]
+
+  PIN uo_out[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 8000 223760 9000 225760 ;
+    END
+  END uo_out[3]
+
+  PIN uo_out[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 10000 223760 11000 225760 ;
+    END
+  END uo_out[4]
+
+  PIN uo_out[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 12000 223760 13000 225760 ;
+    END
+  END uo_out[5]
+
+  PIN uo_out[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 14000 223760 15000 225760 ;
+    END
+  END uo_out[6]
+
+  PIN uo_out[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 16000 223760 17000 225760 ;
+    END
+  END uo_out[7]
+
+  ###########################################################
+  # uio_in[0..7]
+  ###########################################################
+  PIN uio_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 116230 224760 116530 225760 ;
+      LAYER met2 ;
+        RECT 24000 0 25000 2000 ;
     END
-  END uio_in_0
+  END uio_in[0]
 
-  PIN uio_in_1
+  PIN uio_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 113470 224760 113770 225760 ;
+      LAYER met2 ;
+        RECT 26000 0 27000 2000 ;
     END
-  END uio_in_1
+  END uio_in[1]
 
-  PIN uio_in_2
+  PIN uio_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 110710 224760 111010 225760 ;
+      LAYER met2 ;
+        RECT 28000 0 29000 2000 ;
     END
-  END uio_in_2
+  END uio_in[2]
 
-  PIN uio_in_3
+  PIN uio_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 107950 224760 108250 225760 ;
+      LAYER met2 ;
+        RECT 30000 0 31000 2000 ;
     END
-  END uio_in_3
+  END uio_in[3]
 
-  PIN uio_in_4
+  PIN uio_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 105190 224760 105490 225760 ;
+      LAYER met2 ;
+        RECT 32000 0 33000 2000 ;
     END
-  END uio_in_4
+  END uio_in[4]
 
-  PIN uio_in_5
+  PIN uio_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 102430 224760 102730 225760 ;
+      LAYER met2 ;
+        RECT 34000 0 35000 2000 ;
     END
-  END uio_in_5
+  END uio_in[5]
 
-  PIN uio_in_6
+  PIN uio_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 99670 224760 99970 225760 ;
+      LAYER met2 ;
+        RECT 36000 0 37000 2000 ;
     END
-  END uio_in_6
+  END uio_in[6]
 
-  PIN uio_in_7
+  PIN uio_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 96910 224760 97210 225760 ;
+      LAYER met2 ;
+        RECT 38000 0 39000 2000 ;
     END
-  END uio_in_7
+  END uio_in[7]
 
-  # uio_oe[0..7] (top)
-  PIN uio_oe_0
+  ###########################################################
+  # uio_out[0..7]
+  ###########################################################
+  PIN uio_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 50140 224760 50440 225760 ;
+      LAYER met2 ;
+        RECT 24000 223760 25000 225760 ;
     END
-  END uio_oe_0
+  END uio_out[0]
 
-  PIN uio_oe_1
+  PIN uio_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 47380 224760 47680 225760 ;
+      LAYER met2 ;
+        RECT 26000 223760 27000 225760 ;
     END
-  END uio_oe_1
+  END uio_out[1]
 
-  PIN uio_oe_2
+  PIN uio_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 44620 224760 44920 225760 ;
+      LAYER met2 ;
+        RECT 28000 223760 29000 225760 ;
     END
-  END uio_oe_2
+  END uio_out[2]
 
-  PIN uio_oe_3
+  PIN uio_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 41860 224760 42160 225760 ;
+      LAYER met2 ;
+        RECT 30000 223760 31000 225760 ;
     END
-  END uio_oe_3
+  END uio_out[3]
 
-  PIN uio_oe_4
+  PIN uio_out[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 39100 224760 39400 225760 ;
+      LAYER met2 ;
+        RECT 32000 223760 33000 225760 ;
     END
-  END uio_oe_4
+  END uio_out[4]
 
-  PIN uio_oe_5
+  PIN uio_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 36340 224760 36640 225760 ;
+      LAYER met2 ;
+        RECT 34000 223760 35000 225760 ;
     END
-  END uio_oe_5
+  END uio_out[5]
 
-  PIN uio_oe_6
+  PIN uio_out[6]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 33580 224760 33880 225760 ;
+      LAYER met2 ;
+        RECT 36000 223760 37000 225760 ;
     END
-  END uio_oe_6
+  END uio_out[6]
 
-  PIN uio_oe_7
+  PIN uio_out[7]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 30820 224760 31120 225760 ;
+      LAYER met2 ;
+        RECT 38000 223760 39000 225760 ;
     END
-  END uio_oe_7
+  END uio_out[7]
 
-  # uio_out[0..7] (top)
-  PIN uio_out_0
-    DIRECTION OUTPUT ;
+  ###########################################################
+  # uio_oe[0..7]
+  ###########################################################
+  PIN uio_oe[0]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 72220 224760 72520 225760 ;
+      LAYER met2 ;
+        RECT 24000 111880 25000 113880 ;
     END
-  END uio_out_0
+  END uio_oe[0]
 
-  PIN uio_out_1
-    DIRECTION OUTPUT ;
+  PIN uio_oe[1]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 69460 224760 69760 225760 ;
+      LAYER met2 ;
+        RECT 26000 111880 27000 113880 ;
     END
-  END uio_out_1
+  END uio_oe[1]
 
-  PIN uio_out_2
-    DIRECTION OUTPUT ;
+  PIN uio_oe[2]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 66700 224760 67000 225760 ;
+      LAYER met2 ;
+        RECT 28000 111880 29000 113880 ;
     END
-  END uio_out_2
+  END uio_oe[2]
 
-  PIN uio_out_3
-    DIRECTION OUTPUT ;
+  PIN uio_oe[3]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 63940 224760 64240 225760 ;
+      LAYER met2 ;
+        RECT 30000 111880 31000 113880 ;
     END
-  END uio_out_3
+  END uio_oe[3]
 
-  PIN uio_out_4
-    DIRECTION OUTPUT ;
+  PIN uio_oe[4]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 61180 224760 61480 225760 ;
+      LAYER met2 ;
+        RECT 32000 111880 33000 113880 ;
     END
-  END uio_out_4
+  END uio_oe[4]
 
-  PIN uio_out_5
-    DIRECTION OUTPUT ;
+  PIN uio_oe[5]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 58420 224760 58720 225760 ;
+      LAYER met2 ;
+        RECT 34000 111880 35000 113880 ;
     END
-  END uio_out_5
+  END uio_oe[5]
 
-  PIN uio_out_6
-    DIRECTION OUTPUT ;
+  PIN uio_oe[6]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 55660 224760 55960 225760 ;
+      LAYER met2 ;
+        RECT 36000 111880 37000 113880 ;
     END
-  END uio_out_6
+  END uio_oe[6]
 
-  PIN uio_out_7
-    DIRECTION OUTPUT ;
+  PIN uio_oe[7]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met4 ;
-        RECT 52900 224760 53200 225760 ;
+      LAYER met2 ;
+        RECT 38000 111880 39000 113880 ;
     END
-  END uio_out_7
-
-  # uo_out[0..7] (top)
-  PIN uo_out_0
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 94300 224760 94600 225760 ;
-    END
-  END uo_out_0
-
-  PIN uo_out_1
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 91540 224760 91840 225760 ;
-    END
-  END uo_out_1
-
-  PIN uo_out_2
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 88780 224760 89080 225760 ;
-    END
-  END uo_out_2
-
-  PIN uo_out_3
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 86020 224760 86320 225760 ;
-    END
-  END uo_out_3
-
-  PIN uo_out_4
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 83260 224760 83560 225760 ;
-    END
-  END uo_out_4
-
-  PIN uo_out_5
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 80500 224760 80800 225760 ;
-    END
-  END uo_out_5
-
-  PIN uo_out_6
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 77740 224760 78040 225760 ;
-    END
-  END uo_out_6
-
-  PIN uo_out_7
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 74980 224760 75280 225760 ;
-    END
-  END uo_out_7
+  END uio_oe[7]
 
 END MACRO
 
